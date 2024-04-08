@@ -74,11 +74,24 @@ function Navbar(params) {
           {/* </motion.div> */}
 
           <div className=" lg:flex lg:flex-1 lg:justify-end justify-center">
-            {isSignedIn ? <UserButton /> : <div className=" lg:flex lg:flex-1 lg:justify-end justify-center">
-              <SignInButton mode='modal'>
-                <Button variant="outline">Log In</Button>
-              </SignInButton>
-            </div>
+            {isSignedIn ?
+              <div className="flex justify-end">
+                <img
+                  src="/cart.jpg"
+                  alt=""
+                  height={30}
+                  width={30}
+                  className="object-cover object-center cursor-pointer mx-3"
+                />
+
+                <UserButton />
+
+              </div>
+              : <div className=" lg:flex lg:flex-1 lg:justify-end justify-center">
+                <SignInButton mode='modal'>
+                  <Button variant="outline">Log In</Button>
+                </SignInButton>
+              </div>
             }
           </div>
 

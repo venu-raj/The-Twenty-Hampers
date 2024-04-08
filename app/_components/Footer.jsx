@@ -23,7 +23,9 @@ function Footer() {
                                                 </p>
                                                 <div className="flex gap-6 pb-1 cursor">
                                                         {icons.map((item) => (
-                                                                <a key={item.name} href={item.href} className="cursor shrink-0 border-b-2 border-transparent pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-black hover:text-bold">
+
+                                                                <a
+                                                                        key={item.name} href={item.href} className="cursor shrink-0 border-b-2 border-transparent pb-4 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-black hover:text-bold">
                                                                         <img src={item.src} />
                                                                 </a>
 

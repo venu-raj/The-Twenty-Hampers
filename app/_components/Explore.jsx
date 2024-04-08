@@ -54,15 +54,19 @@ function Explore() {
     <div>
       <div>
         <div className="bg-white">
-          <div className="mx-auto max-w-xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-6xl lg:px-8">
+          <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight text-gray-900">Explore Products</h2>
 
-            <div className="mt-6 grid grid-cols-3 gap-x-6 sm:grid-cols-4 lg:grid-cols-8 xl:gap-x-8">
+            <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
               {categoryList.map((product) => (
-                <a className=" hover:border-indigo-500/10 hover:shadow-indigo-500/20" onClick={openModal}>
-                  <div key={product.id} className="group relative">
-
-                    <div className=" bg-gray-300 aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:aspect-none group-hover:opacity-75">
+                <motion.div
+                  className="notification__tray"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, x: "12rem" }}
+                >
+                  <div key={product.id} className="group relative" onClick={openModal}>
+                    <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
                       <img
                         src={product.assetImage.url}
                         alt={product.imageAlt}
@@ -77,16 +81,16 @@ function Explore() {
                             {product.name}
                           </a>
                         </h3>
-                        {/* <p className="mt-1 text-sm text-gray-500">{product.color}</p> */}
                       </div>
                       <p className="text-sm font-medium text-gray-900">₹{product.price}</p>
                     </div>
-
                   </div>
-                </a>
+                </motion.div>
               ))}
             </div>
           </div>
+        </div>
+        <div className="bg-white">
 
           <Transition.Root show={isOpen} as={Fragment}>
             <Dialog as="div" className="relative z-10" onClose={setIsOpen}>
