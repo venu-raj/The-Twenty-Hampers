@@ -40,7 +40,7 @@ function Expediency(params) {
                                         >
                                                 <a
                                                         className="block rounded-xl border border-slate-100 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/20"
-                                                        href="#"
+
                                                 >
                                                         <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ function Expediency(params) {
 
                                                 <a
                                                         className="block rounded-xl border border-slate-100 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/20"
-                                                        href="#"
+
                                                 >
                                                         <svg
                                                                 xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +118,7 @@ function Expediency(params) {
 
                                                 <a
                                                         className="block rounded-xl border border-slate-100 p-8 shadow-xl transition hover:border-indigo-500/10 hover:shadow-indigo-500/20"
-                                                        href="#"
+
                                                 >
                                                         <svg
                                                                 xmlns="http://www.w3.org/2000/svg"

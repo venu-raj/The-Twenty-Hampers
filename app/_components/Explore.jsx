@@ -7,7 +7,6 @@ import GlobalApi from '../_utils/GlobalApi'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { StarIcon } from '@heroicons/react/20/solid'
 
-
 const variant = {
   visible: { scale: 1 },
   hidden: { scale: 0 },
@@ -60,10 +59,11 @@ function Explore() {
             <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
               {categoryList.map((product) => (
                 <motion.div
-                  className="notification__tray"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0, x: "12rem" }}
+                  className="box"
+                  ref={ref}
+                  variants={variant}
+                  initial="hidden"
+                  animate={control}
                 >
                   <div key={product.id} className="group relative" onClick={openModal}>
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">

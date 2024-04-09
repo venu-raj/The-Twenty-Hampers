@@ -11,12 +11,6 @@ export default function Home() {
   return (
     <main className="relative mx-auto max-w-7xl">
       <Navbar/>
-      <Landing/>
-      <Exploree/>
-      {/* <Featured/> */}
-      <Expediency/>
-      <Contact/>
-      <Footer/>
     </main>
   );
 }
